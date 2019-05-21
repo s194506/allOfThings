@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<button id="btn">click</button>
+<button id="btn1">click Here</button>
+
+<button id="btn2">Przejdz na google.pl</button>
+<p id="ev"></p>
+
+<br><br>
+
+<p id="locaX"></p>
+<p id="locaY"</p>
+
+<script>
+
+var btn = document.getElementById('btn');
+var btn1 = document.getElementById('btn1');
+
+function onBtnClick (event){
+console.log(event.layerX);
+
+var vee = event.layerX;
+
+document.getElementById("ev").innerHTML = vee ;
+
+//alert('kliknieto');
+btn.style.backgroundColor = 'blue';
+
+//btn.removeEventListener('click', onBtnClick);
+};
+
+btn.addEventListener('click', onBtnClick); //wywolanie funkcji
+
+function onBtnGoog(event) {
+window.open("https://www.w3schools.com");
+}
+
+btn2.addEventListener('click', onBtnGoog);
+
+
+
+
+function mousePointer(event) {
+var locX = event.clientX;
+var locY = event.clientY;
+
+document.getElementById("locaX").innerHTML = locX;
+document.getElementById("locaY").innerHTML = locY;
+}
+
+document.addEventListener('mousemove', mousePointer);
+
+
+//1rodzaj zdarzenia, 
+</script>
+</body>
+</html>
