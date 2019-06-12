@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+body {
+ margin:5vw;
+ text-align:center;
+ font-family: arial;
+}
+label, input { 
+ height:40px;
+ line-height:40px;
+ font-size:30px;
+}
+div {
+ border:4px solid black;
+ font-size:40px;
+ margin: 20px;}
+ 
+ .active {
+ background-color:black;
+ color:white;
+ }
+</style>
+</head>
+<body>
+<label for="pass">Wprowadz haslo: </label><input id="pass" type="text"></input>
+<div class="msg"></div>
+
+
+<script>
+
+const input = document.getElementById('pass');
+const passwords = ["kAmIl", "HENio", "BENIO"];
+const messages = ["witaj kamil", "witaj henio", "witaj benio"];
+const msg = document.querySelector('.msg');
+
+input.addEventListener('focus',function(){
+input.classList.add('active');
+});
+input.addEventListener('blur',function(){
+input.classList.remove('active');
+});
+
+input.addEventListener('input', function(){
+for(let i=0;i<passwords.length;i++){
+	if(passwords[i].toLowerCase() == event.target.value.toLowerCase()){
+	msg.textContent = messages[i];
+	event.target.value = "";
+	}
+}
+});
+
+</script>
+</body>
+</html>

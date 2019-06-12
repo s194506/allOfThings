@@ -1,0 +1,35 @@
+<html>
+<body>
+
+
+<input id="rower" class="checkbox" type="checkbox" name="rower" value="rower" onClick="zlicz()" >Rower <br>
+<input id="pilka" class="checkbox" type="checkbox" name="pilka" value="pilka" onClick="zlicz()" > Pilka <br>
+<input id="zlicz" type="submit" value="wylicz" onClick="zlicz()">
+<script>
+function jezeli(){
+var rower = document.getElementById('rower').checked;
+if(rower = true) {
+alert('rower is checked');
+}
+}
+
+function jezeli1(){
+var pilka = document.getElementById('pilka').checked;
+if(pilka = true) {
+alert('pilka is checked');
+}
+}
+
+function zlicz() {
+        var wynik = document.querySelectorAll('input:checked');
+        var temporary = "zaz:";
+        for(i=0;i<wynik.length;i++){
+        temporary = temporary + " " + wynik[i].value;
+        }
+	 alert("Ilosc: " + " " + wynik.length + " " + temporary);
+}
+
+
+</script>
+</body>
+</html>

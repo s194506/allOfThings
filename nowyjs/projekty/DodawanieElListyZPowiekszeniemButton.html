@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Kurs JS</title>
+ <style>
+
+ </style>
+</head>
+
+<body>
+
+
+
+ <script>
+
+
+const init = function() {
+const btn = document.createElement('button');
+const btnReset = document.createElement('button');
+
+
+btn.textContent = "click here";
+btn.style.fontSize = "30px";
+btnReset.textContent = "reset";
+btnReset.style.fontSize = "30px";
+
+document.body.appendChild(btn);
+document.body.appendChild(btnReset);
+
+const ulElement = document.createElement('ul');
+
+document.body.appendChild(ulElement);
+
+btn.addEventListener('click', showLi);
+btnReset.addEventListener('click', cleanList);
+}
+
+let number = 1;
+let size = 10;
+const showLi = function() {
+for(let i=0;i<10;i++){
+let liElement = document.createElement('li');
+liElement.style.fontSize = size + "px";
+liElement.textContent = `Element ${number++}`;
+liElement.style.listStyle = "none";
+document.querySelector('ul').appendChild(liElement);
+size++;
+}
+}
+ 
+const cleanList = function() {
+document.querySelector('ul').textContent = "";
+number = 1;
+size = 10;
+}
+ 
+init();
+ </script>
+</body>
+
+</html>

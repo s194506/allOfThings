@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<form >
+  <input type="checkbox" name="wybor" value="pilka nozna" onClick="zaznacz()"> pilka nozna<br>
+  <input type="checkbox" name="wybor" value="tenis ziemny" onClick="zaznacz()">tenis ziemny
+ 
+</form>
+    
+     <script>
+       function zaznacz(){
+         let checkboxes = document.getElementsByName('wybor');
+         let checkboxesChecked = [];
+ 
+     for (var i=0; i<checkboxes.length; i++) {
+         if (checkboxes[i].checked) {
+              (checkboxesChecked.push(checkboxes[i].value));
+                }
+             }
+             alert(checkboxesChecked + " " + checkboxesChecked.length);
+       }   
+	   
+    </script>
+</body>
+</html>

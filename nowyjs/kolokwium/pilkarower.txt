@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+function jezeli(){
+var rower = document.getElementById('rower').checked;
+if(rower = true) {
+alert('rower is checked');
+}
+}
+
+function jezeli1(){
+var pilka = document.getElementById('pilka').checked;
+if(pilka = true) {
+alert('pilka is checked');
+}
+}
+</script>
+
+<input id="rower" class="checkbox" type="checkbox" name="rower" value="checkbox1"  onClick="jezeli()">Rower <br>
+<input id="pilka" class="checkbox" type="checkbox" name="pilka" value="checkbox2" onClick="jezeli1()"> Pilka
+
+</body>
+</html>

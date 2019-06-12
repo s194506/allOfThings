@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+
+div {
+	
+	position: fixed;
+	background-color: black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color:white;
+	text-align:center;
+	line-height:30px;
+	font-size:50px;
+	}
+	
+body { height: 10000vh;}
+</style>
+</head>
+<body>
+
+
+<script>
+const square = document.createElement('div');
+square.textContent = "dzien dobry";
+document.body.appendChild(square);
+
+//odwolanie do css w js
+
+let grow = true;
+let size = 100
+square.style.width = size +"px";
+square.style.height = size +"px";
+
+window.addEventListener('scroll', function () {
+	//ustawiam flage zeby funckja mogla z niej pobierac wartosc bln
+	//jesli wielkosc kwadratu jest wieksza niz polowa okna to ustaw false dla flagi
+	if(size >= window.innerWidth*0.5){
+	grow = false;
+	}
+	//jesli jest rowna lub mniejsza od 0 to zacznij rosnac
+	else if(size == 0){
+	grow = true;
+	}
+	//jak ma rosnac
+	if(grow == true){
+	size +=5;
+	square.style.width = size;
+	square.style.height = size;
+	console.log(window.innerWidth + " " + size);
+	}
+	//jak ma malec
+	else {
+	size -=5;
+	square.style.width = size;
+	square.style.height = size;
+	console.log(window.innerWidth + " " + size);
+	}
+	
+	
+})
+</script>
+</body>
+</html>

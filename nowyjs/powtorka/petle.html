@@ -1,0 +1,111 @@
+<html>
+<body>
+<script>
+/*
+for(let i=0;i<10;i++){
+console.log("wyswietlenie: " + i);
+}
+
+
+//deklaracja iteratora poza while, iterowanie wsrodku
+let i = 0;
+while (i<10){
+i++;
+console.log(i);
+}
+
+
+let money = 50;
+while(money >= 8){
+console.log("Masz: " + money + " i mozesz kupic jeszcze piwko");
+money -=8;
+}
+
+alert (`za ${money} zl juz piwka nie kupie`);
+
+let gasoline = 40;
+let kilometers = 0;
+//gasoline-- najpierw wartosc pozniej odjecie
+while(gasoline--){
+kilometers+=18;
+console.log("Masz " + gasoline + " benzyny. Przejechales " + kilometers);}
+
+
+let study = "nie, wyrzucili mnie";
+
+do{ 
+console.log("ide do szkoly");
+} while (study === true);
+
+
+for(let i=0;i<5;i++){
+	for(let j=0;j<10;j++){
+		console.log(`Pomnoz ${i} przez liczbe ${j} a to da wynik ${i*j}`);
+	}
+}
+
+
+const userAge = [22,15,17,53,12,54,38];
+
+for(let i=0; i<userAge.length; i++){
+console.log(`Wiek uzytkownika numer ${i} wynosi ${userAge[i]}`);
+
+}
+
+
+const nameOfCars = ["Fiat", "Polonez", "Alfa", "Toyota"];
+nameOfCars.sort();
+for(let i=0; i<nameOfCars.length;i++){
+console.log(`Samochod o indeksie ${i} to marka ${nameOfCars[i]}`);
+}
+
+
+
+// oblicz wiek uzytkownika
+
+const dateOfBirth = [1996,2010,1964, 1999];
+const todayDate = 2019;
+
+for(let j=0; j<dateOfBirth.length;j++){
+console.log(`Użytkownik o indeksie ${j} ma teraz ${todayDate - dateOfBirth[j]}`);
+}
+
+
+
+const guests = ["programista", "murarz", "drukarz", "pilkarz", "sedzia"];
+
+for(let i=0; i<guests.length;i++){
+	if(guests[i]==="programista"){
+	console.log("Przykro mi nie wchodzisz bo jestes " + guests[i]);
+	}
+	else if(guests[i]==="pilkarz"){
+	console.log("Zapraszamy serdecznie " + guests[i]);
+	}
+	else {
+	console.log("Prosze okazac dokumenty panie " + guests[i]);
+	}
+}
+//const guest liczba pojedyncza dla tablicy najlepiej to jest petla for of
+for (const guest of guests){
+console.log(guest);
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

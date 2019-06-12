@@ -1,0 +1,28 @@
+<html>
+<body>
+<input type="checkbox" class="pilka nozna" onClick=alertt()> pilka nozna</input> <br>
+<input type="checkbox" class="koszykowka" onClick=alertt()> koszykowka </input>
+
+<script>
+
+//po kliknieciu wyswietl alert
+
+
+const alertt = function(){
+//alert(`kliknales ${++number}`);
+let inputArray = document.querySelectorAll('input:checked');
+let checkboxesChecked = [];
+let tmp = "";
+	for(let i=0;i<inputArray.length;i++){
+		checkboxesChecked.push(inputArray[i]);
+		tmp += checkboxesChecked[i].classList.value + " ";
+	}
+	alert(`Ilosc zaznaczonych: ${checkboxesChecked.length}. Zaznaczone: ${tmp}`);	
+}
+
+
+
+
+</script>
+</body>
+</html>

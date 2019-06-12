@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+body {
+ margin:5vw;
+ text-align:center;
+ font-family: arial;
+}
+button { 
+ height:40px;
+ line-height:40px;
+ font-size:30px;
+}
+
+div {
+	font-size:30px;
+
+}
+
+</style>
+</head>
+<body>
+
+<button>Wylosuj imie</button>
+<div id="name"></div>
+<script>
+
+const btn = document.querySelector('button');
+const names = ["kamil", "lukasz","andrzej","zbigniew","krzysztof","jaromir","pawel","jaca","belmondo", "byczek"];
+const prefix = ["najlepsze imie to:", "wybierz:", "musisz nazwac tak:", "eleganckie to", "kozackie imie to:"]
+const div = document.querySelector('div');
+
+
+
+btn.addEventListener('click', function(){
+	let random = Math.floor(Math.random()*names.length);
+	let randomPrefix = Math.floor(Math.random()*prefix.length);
+	div.textContent = `${prefix[randomPrefix]} ${names[random]}`;
+	console.log(random);
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<h1> hello </h1>
+<body>
+<script>
+
+function checkPesel(pesel) {
+	
+if(typeof pesel === "string"){
+//console.log("Poprawny format");
+	if(pesel.length === 11) {
+		//console.log("dlugosc poprawna");
+			if(pesel.charAt(0) !== "0") {
+			console.log("Pesel jest poprawny");
+			}
+			else {console.log("Pierwsza liczba niepoprawna");}
+	}
+	else { console.log("dlugosc niepoprawna");}
+}
+else { console.log("niepoprawny format");}
+
+}
+
+</script>
+</body>
+</html>

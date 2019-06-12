@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<input type="checkbox" class="pilka nozna" onClick=alertFunction() > pilka nozna</input>
+<input type="checkbox" class="koszykowka" onClick=alertFunction()> koszykowka </input>
+
+<script>
+
+
+function alertFunction(){
+let checkArray = document.querySelectorAll('input');
+let temporary = "";
+let temporaryArray = [];
+
+for(let i=0;i<checkArray.length;i++){
+	if(checkArray[i].checked === true) {
+	temporary += checkArray[i].className + " ";
+	temporaryArray.push(checkArray[i]);
+	} 
+}
+alert(` ${temporary} Ilosc elementow check: ${temporaryArray.length}`);
+}
+
+//problem w tym ze podczas wywolania checkArray ktore jest po
+//querySelectorAll nie moge w odpowiedni sposob uzyc value na nodeList natomiast
+//jakbym mial name to bez problemu bym to value wyciagnal
+// i nie musial robic temporary tylko wyciagnac value po checkboxChecked.
+
+/*
+About the differences, there is an important one in the results between querySelectorAll and getElementsByClassName
+: the return value is different. querySelectorAll will return a static collection,
+ while getElementsByClassName returns a live collection.
+*/
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+.fontss {
+	font-size: 30px
+}
+
+</style>
+</head>
+<body>
+<button>Dodaj element do listy</button>
+<ul>
+</ul>
+
+
+<script>
+
+const btn = document.querySelector('button');
+let number =1;
+const ul = document.querySelector('ul');
+
+const addLi =  function() {
+
+const fLi = document.createElement('li');
+fLi.textContent = number;
+ul.appendChild(fLi);
+
+if(number%3 === 0){
+fLi.classList.add("fontss");
+}
+
+number +=2;
+}
+
+btn.addEventListener('click',addLi);
+</script>
+</body>
+</html>

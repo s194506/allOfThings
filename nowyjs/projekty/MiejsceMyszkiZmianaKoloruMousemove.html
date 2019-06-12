@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Kurs JS</title>
+ <style>
+div { position:fixed;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 40px;
+font-family: arial;}
+
+ </style>
+</head>
+
+<body>
+<div></div>
+<h1>aaaaaaaa</h1>
+ <script>
+let size = 20;
+let divElement = document.querySelector('div');
+//pierwszy parametr zawsze przyjmuje event, zawsze jest tam wbijany obiekt zdarzenia event
+const goToDiv = function(e){
+let x = e.clientX;
+
+let y = e.clientY;
+document.body.classList.add('red');
+divElement.textContent = `x: ${x}, y:${y}`;
+console.log(event);
+document.body.style.backgroundColor = `rgb(${x/3},${y/3},100)`;
+//document.body.style.backgroundColor = "rgb("+x+","+y+","+y+")";
+
+let h1El = document.querySelector('h1');
+h1El.style.fontSize = `${size}px`;
+size++;
+}
+
+window.addEventListener('mousemove',goToDiv);
+ </script>
+</body>
+
+</html>

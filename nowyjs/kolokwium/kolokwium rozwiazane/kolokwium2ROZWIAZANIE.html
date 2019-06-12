@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<ul>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+</ul>
+
+<script>
+const ulElement = document.querySelector('ul');
+const h1Element = document.querySelector('h1');
+const h2Element = document.querySelector('h2');
+const h3Element = document.querySelector('h3');
+
+/*
+const h1Element = document.createElement('h1');
+h1Element.textContent = "h1";
+ulElement.appendChild(h1Element);
+
+
+
+let h2Element = document.createElement('h2');
+h2Element.textContent = "h2";
+ulElement.appendChild(h2Element);
+
+let h3Element = document.createElement('h3');
+h3Element.textContent = "h3";
+ulElement.appendChild(h3Element);
+*/
+
+let goUp = function(){
+ulElement.insertBefore(h1Element, ulElement.firstChild);
+}
+
+let goUp1 = function(){
+ulElement.insertBefore(h2Element,ulElement.firstChild);
+}
+
+let goUp2 = function(){
+ulElement.insertBefore(h3Element,ulElement.firstChild);
+}
+
+
+h1Element.addEventListener('click',goUp);
+h2Element.addEventListener('click', goUp1);
+h3Element.addEventListener('click',goUp2);
+
+</script>
+</body>
+</html>

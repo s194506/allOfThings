@@ -1,0 +1,32 @@
+<html>
+<h1> hello </h1>
+<body>
+<script>
+/*
+const array = [1,2,3,[4,5,6],7,8];
+console.log(array);
+
+const nameList = ["Kamil","Adam","Piotr","Wieslaw"];
+nameList[3] = "Adrian";
+nameList[0] === "Kamil" ? console.log(nameList[0]) : console.log("Nie wiadomo");
+*/
+//stworzenie 100 pustych pól tablicy;
+const testArray = [];
+testArray.length = 100;
+
+//odwolanie do ostatniego elementu tablicy
+testArray[99] = "Kamil";
+console.log(testArray[testArray.length - 1]);
+
+//dodanie kolejnego ostatniego elementu tablicy
+testArray[testArray.length] = "Marcin";
+
+//wyzerowanie tablicy -> staje sie pusta
+testArray.length = 0;
+
+// przypisanie elementow tablicy do danych zmiennych
+const game = [120.64, 55, "rogan"];
+let [time, points, name] = game;
+</script>
+</body>
+</html>

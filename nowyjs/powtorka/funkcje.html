@@ -1,0 +1,150 @@
+<html>
+<h1> hello </h1>
+<body>
+<script>
+/*
+const showMessage = function(message){
+console.log(message);
+}
+//wywolanie za pomoca zmiennej
+showMessage("Hello");
+
+const showMsg = function(){
+console.log("hello my friend");
+}
+showMsg();
+
+function addNumbers(number1, number2){
+return number1+number2;
+}
+//zwraca ale nie wyswietla bo nie napisalismy console log ani nic innego/ trzeba wywolac w konsoli
+addNumbers(2,8);
+
+//jesli chcemy przypisac do innej zmiennej nasza funkcje to bedzie tam tylko referencja a nie przekazanie zawartosci
+
+const showMsg1 = showMsg;
+showMsg1();
+//////////////////////////////////
+const divideBy2 = function(number){
+console.log(number/2);
+return number/2;
+}
+
+const result1 = divideBy2(10);
+//////////////////////////////////
+
+let numberr = 0;
+const add = function () {
+numberr++;
+console.log(numberr);
+}
+
+add();
+*/
+//////////////////////////////
+//funkcja callback
+
+function count(x, callback){
+// w ramach zwrotu tej funkcji count wywola kolejna funkcje ktora nazwe podajemy w argumencie
+return callback(x);
+}
+
+
+function addOne(item) {
+item++;
+console.log(item);
+return item;
+}
+
+function substractOne(number) {
+number --;
+console.log(number);
+return number;
+}
+
+//const result = count(5,addOne);
+//const resultSub = count(5, substractOne);
+
+
+// przyklad 2 addEventListener!!
+const showClick = function() {console.log("you clicked");};
+
+
+document.body.addEventListener("click", showClick);
+
+const showTime = function() {
+console.log("Minelo 2 sekund");};
+
+//setInterval(showTime,2000);
+//setInterval(function() {console.log("hello5s")}, 5000);
+
+
+const usersAge = [20,30,40,50,60,70,80];
+
+//usersAge.forEach(function(userAge) {console.log(`Uzytkownik ma ${userAge} lat`);});
+
+const showArguments = function() {
+console.log(arguments);
+console.log(arguments.length);
+console.log(arguments[0]);
+console.log(typeof arguments);
+}
+
+//showArguments(1,"hello",{}, [222]);
+
+const addAllNumbers = function(){
+let result = 0;
+	for(let i=0; i<arguments.length;i++){
+		result += arguments[i];
+	}
+console.log("How much arguments? " + arguments.length)
+return result;
+}
+
+//nie moge podac argumentu sex nie podajac dwoch wczesniejszych itp.
+const showInfoAboutUser = function (age, name, sex) {
+
+	if(arguments.length === 0) {console.log(`Brak informacji`);}
+	else if(arguments.length === 1) {console.log(`Podales tylko wiek: ${age}`);}
+	else if(arguments.length === 2) {console.log(`Podales wiek i imie: ${age}, ${name}`);}
+	else {console.log(`Podales wiek i imie i plec: ${age}, ${name}, ${sex}`);}
+
+}
+
+//showInfoAboutUser(20,"Kamil","Mezczyzna");
+
+let showAllArguments =  function(...items) {
+console.log(items);
+console.log(items[2]);
+return args;
+}
+
+//showAllArguments("1", 2, "Kamil", {}, true);
+
+
+let addAllWords = function (...words) {
+	console.log(words);	
+	let txt = "";
+	/*for(let i=0; i<words.length;i++){
+		txt += words[i] + ",";
+	}
+	
+	words.forEach(function (word){
+		txt += word;
+	})
+	
+	*/
+	
+	words.forEach(word => txt += `${word}`)
+	console.log(txt);
+}
+//addAllWords(1,2,"kamil");
+
+function showUsers(owner, ...others){
+console.log(`Na imprezie byl ${owner} ${others.length ? "oraz " + others + "." : "."}`);
+}
+
+
+</script>
+</body>
+</html>

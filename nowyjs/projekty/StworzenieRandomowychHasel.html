@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+body {
+ margin:5vw;
+ text-align:center;
+ font-family: arial;
+}
+button { 
+ height:40px;
+ line-height:40px;
+ font-size:30px;
+}
+
+div {
+	font-size:30px;
+
+}
+
+li {
+	list-style: none;
+}
+
+</style>
+</head>
+<body>
+
+<button>Wypisz 100 randomowych haseł</button>
+<div id="name"></div>
+<ul>
+</ul>
+<script>
+const array = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+const btn = document.querySelector('button');
+
+let ul = document.querySelector('ul');
+btn.addEventListener('click',function(){
+let haslo = [];
+for (let j=0;j<100;j++){
+	for(let i=0; i<10;i++){
+		haslo[i] = (array[Math.floor(Math.random()*array.length)]);
+	}
+	let liElement = document.createElement('li');
+	liElement.textContent = haslo.join("").toLowerCase();
+	document.querySelector('ul').appendChild(liElement);
+	}
+	});
+
+</script>
+</body>
+</html>

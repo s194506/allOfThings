@@ -1,0 +1,59 @@
+<html>
+<h1> hello </h1>
+<body>
+<script>
+const cat = new Object();
+
+cat.name = "Gacek";
+cat['age'] = 2;
+cat.meow = function(){
+console.log("Meow meow");
+}
+
+const dog = {
+name: 'Fafik',
+age: 2,
+barking: function() {
+console.log("hauhau");
+},
+
+squeaking() {
+console.log("aa uuuu");
+}
+}
+
+dog.castrated = false;
+dog.childrens = ['Bobik','Lexi','Rider'];
+
+
+const result = {
+value: 1,
+}
+
+function plus(){
+result.value++;
+}
+
+let score = 5;
+const counter = {
+score: 0,
+increment: function(){
+//na obiekcie na ktorym wykonywana jest ta metoda
+this.score++;
+//mozna odwolac sie w danym obiekcie do zmiennych poza nim np:
+score++;
+}
+}
+counter.increment();
+console.log(score);
+console.log(counter.score);
+
+//console.log(`Aktualny czas to: ${new Date().toLocaleString()}`);
+
+const price = 40;
+
+console.log(`Cena jest dzisiaj wysoka? ${price >= 80 ? "tak" : "nie"}`);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<body>
+<input type="submit" value="zmien kolor"></input>
+
+<script>
+
+const btn = document.querySelector('input');
+/*
+const changeColorBody = function() {
+let x = event.clientX;
+let y = event.clientY;
+const color = getColor(event);
+document.body.style.backgroundColor =`rgb(${Math.random()*100},${Math.random()*100},${Math.random()*100})`;
+
+}
+*/
+const getColor = function(){
+if(event.clientX%2===0){
+	return "red";
+}
+else {
+	return "green";}
+}
+
+const changeColorBtn = function() {
+let x = event.clientX;
+let y = event.clientY;
+const color = getColor(event);
+document.body.style.backgroundColor = color;
+console.log(x);
+}
+
+
+btn.addEventListener('click',changeColorBtn);
+//document.body.addEventListener('click',changeColorBody);
+
+</script>
+</body>
+</html>
