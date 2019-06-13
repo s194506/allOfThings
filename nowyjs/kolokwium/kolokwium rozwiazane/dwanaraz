@@ -1,1 +1,58 @@
+checkboxes
+<html>
+<body>
 
+<input type="checkbox" class="pilka nozna" onClick=alertFunction() > pilka nozna</input>
+<input type="checkbox" class="koszykowka" onClick=alertFunction()> koszykowka </input>
+
+<script>
+function alertFunction(){
+let checkArray = document.querySelectorAll('input');
+let temporary = "";
+let temporaryArray = [];
+for(let i=0;i<checkArray.length;i++){
+	if(checkArray[i].checked === true) {
+	temporary += checkArray[i].className + " ";
+	temporaryArray.push(checkArray[i]);
+	} 
+}
+alert(` ${temporary} Ilosc elementow check: ${temporaryArray.length}`);
+}
+</script>
+</body>
+</html>
+
+=========================================================================================
+
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<ul>
+<p id="p1">1</p>
+<p id="p2">2<p>
+<p id="p3">3<p>
+</ul>
+
+<script>
+const ulElement = document.querySelector('ul');
+const p1Element = document.querySelector('#p1');
+const p2Element = document.querySelector('#p2');
+const p3Element = document.querySelector('#p3');
+let goUp = function(){
+ulElement.insertBefore(p1Element, ulElement.firstChild);
+}
+let goUp1 = function(){
+ulElement.insertBefore(p2Element,ulElement.firstChild);
+}
+let goUp2 = function(){
+ulElement.insertBefore(p3Element,ulElement.firstChild);
+}
+p1Element.addEventListener('click',goUp);
+p2Element.addEventListener('click', goUp1);
+p3Element.addEventListener('click',goUp2);
+</script>
+</body>
+</html>
