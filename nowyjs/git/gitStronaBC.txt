@@ -1,0 +1,10 @@
+utworz repo
+stworz plik create a new file pod https
+kamil.txt 
+usun plik (wejdz w niego i kosz)
+utworz 3 nowe branche a b c
+utworz a bedac na masterze, wroc na mastera utworz b, wejdz na mastera utworz c
+do kazdego dodaj plik tekst zacznij od master
+(create new file kamil1,2,3.txt)
+merge b z c compare z b (base:b compare: c)
+
