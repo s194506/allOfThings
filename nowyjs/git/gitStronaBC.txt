@@ -1,10 +1,24 @@
 utworz repo
-stworz plik create a new file pod https
-kamil.txt 
+
+stworz plik create a new file pod https kamil.txt 
+
 usun plik (wejdz w niego i kosz)
+
+(przy pustym masterze)
 utworz 3 nowe branche a b c
+
 utworz a bedac na masterze, wroc na mastera utworz b, wejdz na mastera utworz c
+
 do kazdego dodaj plik tekst zacznij od master
 (create new file kamil1,2,3.txt)
-merge b z c compare z b (base:b compare: c)
 
+merge b z c 
+kliknij compare bedac na b (base:b compare: c)
+create pull request, merge pull request,confirm merge
+
+sprawdz czy na b masz 2 pliki - wrzuc zdjecie
+upload files pilka.jpg
+
+merge master z b - wejdz na master i compare & pull request albo jak tego nie bedzie
+to na jakikolwiek inny branch daj merge i zmien compare create pull request
+merge pull request confirm
