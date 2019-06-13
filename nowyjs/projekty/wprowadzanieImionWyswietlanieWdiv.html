@@ -1,0 +1,31 @@
+<html>
+<body>
+
+
+<input></input> <button>wprowadz imie</button>
+<div></div>
+    
+<script>
+const names = [];
+let div = document.querySelector('div');
+
+const addName = function(){
+	const input = document.querySelector('input');
+	const name = input.value;
+	if(input.value.length != 0 && input.value != names){
+	names.push(name);
+	//console.log(names);
+	div.textContent += name + ",";
+	input.value = "";
+	}
+	else if(input.value == "") {alert('wpisz imie');}
+	else if(input.value == names){alert('to imie juz istnieje'); input.value = ""};
+	
+
+};
+
+document.querySelector('button').addEventListener('click',addName);
+	 
+</script>
+</body>
+</html>

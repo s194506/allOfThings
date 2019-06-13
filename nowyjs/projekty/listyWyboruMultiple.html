@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<select size="2" multiple>
+	<option id="pilka">pilka</option>
+	<option id="koszykowka">koszykowka</option>
+</select>
+
+     <script>
+	const select = document.querySelector('select');
+	select.addEventListener('change',function(){
+if(select.selectedIndex == 1){ 
+alert(document.querySelector('#koszykowka').textContent);}
+
+
+else if (select.selectedIndex == 0){ 
+	alert(document.querySelector('#pilka').textContent);
+	let newOption = document.createElement('option');
+	newOption.textContent = "tenis";
+	newOption.setAttribute('id','tenis');
+	select.add(newOption);
+	
+	}
+	
+else if (select.selectedIndex == 2){ 
+	alert(document.querySelector('#tenis').textContent);
+	}	
+	
+	
+	});
+    </script>
+</body>
+</html>
+  

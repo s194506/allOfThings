@@ -1,0 +1,42 @@
+<html>
+<body>
+
+
+<div>Dodaj mozliwosci:</div> <input></input>
+<button id="add">dodaj</button><button id="reset">resetuj</button>
+<h1> komputerze powiedz mi co mam z tym zrobic </h1>
+<button id="drawElement">pokaż radę</button><button id="showAll">pokaz wszystkie mozliwosci</button>
+<div id="showDiv"></div>
+<script>
+
+const btnAdd = document.querySelector('#add');
+const btnReset = document.querySelector('#reset');
+let input = document.querySelector('input');
+const btnDraw = document.querySelector('#drawElement');
+const btnShow = document.querySelector('#showAll');
+const showDiv = document.querySelector('#showDiv');
+	
+let capabilities = ["walcz","przemysl to"];
+btnAdd.addEventListener('click',function(){
+capabilities.push(input.value);
+console.log(capabilities);
+input.value = "";
+});
+
+btnReset.addEventListener('click',function(){
+capabilities = [];
+console.log(capabilities);
+});
+
+btnShow.addEventListener('click',function(){
+capability = capabilities.join(`--------`);
+showDiv.textContent = capability;
+});
+
+btnDraw.addEventListener('click',function(){
+showDiv.textContent = capabilities[Math.floor(Math.random()*capabilities.length)];
+});
+
+</script>
+</body>
+</html>

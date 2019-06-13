@@ -1,0 +1,28 @@
+<html>
+<body>
+
+
+	<select>
+		<option id="pilka">pilka</option>
+		<option id="koszykowka">koszykowka</option>
+	</select>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+<select size="2" multiple>
+	<option>pilka</option>
+	<option>koszykowka</option>
+</select>
+
+     <script>
+	const select = document.querySelector('select');
+	select.addEventListener('change',function(){
+	if(select.selectedIndex == 1){ alert(document.querySelector('#koszykowka').textContent);}
+	else if (select.selectedIndex == 0){ alert(document.querySelector('#pilka').textContent);}
+	});
+    </script>
+</body>
+</html>
+  
