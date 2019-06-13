@@ -1,0 +1,49 @@
+git clone https://github.com/s194506/nauka.git
+cd nauka
+vi dane.txt :wq
+git add dane.txt
+git commit -m "new"
+git push origin master (powinno wyskoczyc okno do logowania)
+
+wchodze na folder nauka lokalnie
+git rm dane.txt (powinno zniknac z folderu) (pamietaj o usunieciu plikow z mastera a dopiero pozniej tworzenie branchy)
+git commit -m "new" 
+git push origin master
+
+git checkout -b new1
+git checkout master
+git checkout -b new2
+git checkout master
+
+vi dane.txt :wq
+git add dane.txt
+git commit -m "aaa"
+git push origin master
+
+git checkout new1
+vi dane.txt ESC :wq
+git add dane.txt
+git commit -m "aaa"
+git push origin new1
+
+git checkout new2
+vi dane.txt ESC :wq
+git add dane.txt
+git commit -m "aaa"
+git push origin new2
+
+git checkout master
+git merge new1 (CONFLICT)
+vi dane.txt popraw conflict ESC :wq
+git add dane.txt 
+git commit -m "aa"
+git push origin master
+
+git merge new2
+vi dane.txt
+git add dane.txt
+git commit -m "merge"
+git push origin master 
+
+cat dane.txt
+

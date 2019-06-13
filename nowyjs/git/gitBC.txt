@@ -1,0 +1,57 @@
+ git clone https://github.com/s194506/przykladowe1.git
+ cd przykladowe1
+vi kamil.txt
+git add kamil.txt
+git commit -m "new"
+git push origin master
+
+ZALOGUJ SIE
+wejdz lokalnie
+
+git rm kamil.txt
+git commit -m "aaa"
+git push origin master
+
+git branch a 
+git branch b
+git branch c
+
+vi dane.txt
+git add dane.txt
+git commit -m "plp"
+git push origin master
+
+git checkout a
+vi dane1.txt esc :wq
+git add dane1.txt
+git commit -m "aaa"
+git push origin a
+
+git checkout b
+vi dane2.txt esc :wq
+git add dane2.txt 
+git commit -m "sdadas"
+git push origin b
+
+git checkout c
+vi dane3.txt esc :wq
+git add dane3.txt 
+git commit -m "sdadas"
+git push origin c
+
+git checkout b
+git merge c
+ESC :wq wyskakuje okienko
+
+dodaje pilka zdjecie lokalnie przez folder
+git add pilka.jpg
+git commit -m "jpg"
+git push origin b
+
+git checkout master
+git merge b wyskoczy okienko
+git push origin master (sprawdz czy weszlo na github)
+
+
+
+
